@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Plot name",
+        "type": "string"
+      },
+      "color": {
+        "title": "Plot color",
+        "type": "string"
+      },
+      "polygon": {
+        "title": "Plot points",
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": [
+            {
+              "title": "Latitude",
+              "type": "number"
+            },
+            {
+              "title": "Longitude",
+              "type": "number"
+            }
+          ]
+        }
+      }
+    },
+    "required": ["name", "color", "polygon"],
+    "additionalProperties": false
+  }
+}
